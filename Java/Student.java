@@ -22,7 +22,7 @@ public void setgrades(double [] grades) {
     this.grades = grades;
 }
 
-public void getGrades() {
+public void getgrades() {
     System.out.println("Your grades are: " + Arrays.toString(grades));
 }
 

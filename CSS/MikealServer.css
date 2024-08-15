@@ -33,8 +33,37 @@ h1 {
 .profile-pic {
     display: block;
     margin: 0 auto 20px;
-    width: 100%; /* Make the image responsive */
-    max-width: 400px; /* Increase the maximum width */
+    width: 100%;
+    max-width: 400px;
     height: auto;
     border-radius: 50%;
+}
+.contact-link {
+    color: #333; 
+    font-size: 20px; 
+    font-weight: bold;
+    text-align: center; 
+    display: block; 
+    padding: 20px; 
+}
+
+.cool-button {
+    background-color: #0fc61e; 
+    color: white; 
+    border: none; 
+    padding: 5px 10px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.cool-button:hover {
+    background-color: #308a06; /* Darker on hover */
+    transform: scale(1.1); /* enlarge on hover */
+}
+
+.cool-button:active {
+    background-color: #308a06; 
+    transform: scale(0.98); /* Slightly shrink on click */
 }

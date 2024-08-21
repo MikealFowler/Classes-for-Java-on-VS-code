@@ -2,6 +2,7 @@ let randomNumber = Math.floor(Math.random() * 100) + 1;
 let guessCount = 0;
 
 document.getElementById('submitGuess').addEventListener('click', function() {
+    console.log("Submit button clicked."); // Add this line to see if the click event is firing
     let userGuess = parseInt(document.getElementById('guess').value);
     guessCount++;
 

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Flexbox in SS</title>
+    <style>
+        /* Flex Container: Creates a flexbox container. Flex items are direct children of this container. */
+        .flex-container {
+            display: flex; /* This enables flexbox layout for the container */
+            border: 2px solid #444; /* Adds a border around the flex container */
+            padding: 10px; /* Adds padding inside the flex container */
+            margin-bottom: 20px; /* Adds space below the flex container */
+            background-color: #f9f9f9; /* Sets the background color of the flex container */
+        }
+
+        /* Flex Items: Styles for each item inside the flexbox container */
+        .flex-item {
+            background-color: #4CAF50; /* Sets the background color for flex items */
+            color: white; /* Sets the text color for flex items */
+            padding: 20px; /* Adds padding inside each flex item */
+            margin: 10px; /* Adds space around each flex item */
+            text-align: center; /* Centers the text inside each flex item */
+            font-size: 18px; /* Sets the font size for the text inside flex items */
+            border-radius: 5px; /* Rounds the corners of each flex item */
+        }
+
+        /* Flexbox Properties: Different ways to align and distribute flex items */
+        .flex-container.row {
+            flex-direction: row; /* Aligns items in a horizontal row (default behavior) */
+        }
+
+        .flex-container.column {
+            flex-direction: column; /* Aligns items in a vertical column */
+        }
+
+        .flex-container.space-between {
+            justify-content: space-between; /* Distributes space between items, first item at the start, last item at the end */
+        }
+
+        .flex-container.center {
+            justify-content: center; /* Centers items horizontally (or vertically if in column mode) */
+            align-items: center; /* Centers items vertically (or horizontally if in column mode) */
+        }
+
+        .flex-container.stretch {
+            align-items: stretch; /* Stretches items to fill the container along the cross axis (vertical by default) */
+        }
+
+        .flex-item.grow {
+            flex-grow: 1; /* Allows the item to grow and take up the remaining space */
+            
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Introduction to Flexbox in CSS</h1>
+    <p>Flexbox is a powerful layout tool in CSS that allows you to create flexible and responsive layouts easily. It is especially useful for arranging items in a row or column and distributing space between them.</p>
+
+    <h2>Basic Flexbox Layout</h2>
+    <p>The following example demonstrates a basic flexbox layout with three items arranged in a horizontal row:</p>
+    <div class="flex-container row">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>Explanation:</p>
+    <ul>
+        <li>The flex container has <code>flex-direction: row;</code>, so items are arranged in a row.</li>
+        <li>Each <code>.flex-item</code> is a direct child of the container and is laid out in the order they appear in the HTML.</li>
+    </ul>
+
+    <h2>Column Layout</h2>
+    <p>Flexbox can also align items vertically by changing the <code>flex-direction</code> to <code>column</code>:</p>
+    <div class="flex-container column">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>Explanation:</p>
+    <ul>
+        <li>Here, the flex container has <code>flex-direction: column;</code>, so items are stacked vertically.</li>
+        <li>Each <code>.flex-item</code> appears one below the other.</li>
+    </ul>
+
+    <h2>Justify Content: Space Between</h2>
+    <p>The <code>justify-content</code> property helps in controlling the spacing between items. In the example below, items are spread out with equal space between them:</p>
+    <div class="flex-container row space-between">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>Explanation:</p>
+    <ul>
+        <li>With <code>justify-content: space-between;</code>, the first item is placed at the start and the last item at the end, with equal space between all items.</li>
+    </ul>
+
+    <h2>Centering Items</h2>
+    <p>Flexbox makes centering elements easy. Below, items are centered both horizontally and vertically:</p>
+    <div class="flex-container row center">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>Explanation:</p>
+    <ul>
+        <li><code>justify-content: center;</code> centers the items horizontally.</li>
+        <li><code>align-items: center;</code> centers the items vertically.</li>
+    </ul>
+
+    <h2>Stretching Items</h2>
+    <p>Flexbox allows items to stretch to fill the container. Here’s an example where the items stretch vertically:</p>
+    <div class="flex-container row stretch">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <p>Explanation:</p>
+    <ul>
+        <li>With <code>align-items: stretch;</code>, each item stretches to fill the container vertically.</li>
+    </ul>
+
+    <h2>Flex-Grow Property</h2>
+    <p>The <code>flex-grow</code> property allows a flex item to grow and take up available space. In this example, the third item grows to take up the remaining space:</p>
+    <div class="flex-container row">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item grow">Item 3 (Grows)</div>
+    </div>
+
+    <p>Explanation:</p>
+    <ul>
+        <li>The third item has <code>flex-grow: 1;</code>, meaning it will take up any remaining space after the other items have been sized.</li>
+        <li>This is useful for creating flexible layouts where some items need to expand to fill the space.</li>
+    </ul>
+
+</body>
+</html>

@@ -17,3 +17,8 @@ document.getElementById('submitGuess').addEventListener('click', function() {
         document.getElementById('guessCount').textContent = `Guess count: ${guessCount}`;
     }
 });
+
+// JavaScript to handle the color inversion
+document.getElementById('invertButton').addEventListener('click', function() {
+    document.body.classList.toggle('invert-colors');
+});
